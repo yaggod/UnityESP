@@ -34,7 +34,7 @@ namespace UnityESP
 					Vector3 enemyPosition = objectToTrack.transform.position;
 					Vector3 sceenPosition = Camera.main.WorldToScreenPoint(enemyPosition);
 
-					Bounds bounds = objectToTrack.GetComponent<Collider>().bounds;
+					Bounds? bounds = objectToTrack.GetComponent<Collider>()?.bounds;
 
 					if (sceenPosition.z > 0f)
 					{
