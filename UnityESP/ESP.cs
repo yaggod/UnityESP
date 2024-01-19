@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace UnityESP
 {
-	class ESP : MonoBehaviour
+	public class ESP : MonoBehaviour
 	{
 		private readonly Dictionary<Type, bool> TypesToTrack = new Dictionary<Type, bool>();
 
