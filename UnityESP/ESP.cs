@@ -4,11 +4,11 @@ using UnityEngine;
 
 namespace UnityESP
 {
-	class Hacks : MonoBehaviour
+	class ESP : MonoBehaviour
 	{
 		private readonly Dictionary<Type, bool> TypesToTrack = new Dictionary<Type, bool>();
 
-		public void ChangeState<T>(bool value) where T : MonoBehaviour
+		public void AddTrackable<T>(bool value) where T : MonoBehaviour
 		{
 			Type type = typeof(T);
 			if (TypesToTrack.ContainsKey(type))
