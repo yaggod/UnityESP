@@ -13,6 +13,8 @@ namespace UnityESP
 			Type type = typeof(T);
 			if (TypesToTrack.ContainsKey(type))
 				TypesToTrack[typeof(T)] = value;
+			else
+				TypesToTrack.Add(type, value);
 		}
 
 
