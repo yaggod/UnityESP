@@ -43,11 +43,14 @@ namespace UnityESP
 
 		public static void CastToLocalAndDraw(Vector3 pointA, Vector3 pointB, Color color, float width)
 		{
-			Vector2 from = Camera.main.WorldToScreenPoint(pointA);
-			Vector2 to = Camera.main.WorldToScreenPoint(pointB);
-
+			Vector3 from = Camera.main.WorldToScreenPoint(pointA);
+			Vector3 to = Camera.main.WorldToScreenPoint(pointB);
 			from.y = Screen.height - from.y;
 			to.y = Screen.height - to.y;
+			if (from.z < 0)
+				return;
+			if (to.z < 0)
+				return;
 
 
 			DrawLine(from, to, color, width);
